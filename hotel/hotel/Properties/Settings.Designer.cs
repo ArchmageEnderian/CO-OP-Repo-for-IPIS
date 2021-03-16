@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace HotelTrivago.Properties
+namespace hotel.Properties
 {
 
 

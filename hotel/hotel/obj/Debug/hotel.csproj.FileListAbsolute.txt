@@ -1,0 +1,15 @@
+C:\Users\User\source\repos\hotel\hotel\bin\Debug\hotel.exe.config
+C:\Users\User\source\repos\hotel\hotel\bin\Debug\hotel.exe
+C:\Users\User\source\repos\hotel\hotel\bin\Debug\hotel.pdb
+C:\Users\User\source\repos\hotel\hotel\obj\Debug\hotel.csprojAssemblyReference.cache
+C:\Users\User\source\repos\hotel\hotel\obj\Debug\MainWindow.g.cs
+C:\Users\User\source\repos\hotel\hotel\obj\Debug\App.g.cs
+C:\Users\User\source\repos\hotel\hotel\obj\Debug\hotel_MarkupCompile.cache
+C:\Users\User\source\repos\hotel\hotel\obj\Debug\hotel_MarkupCompile.lref
+C:\Users\User\source\repos\hotel\hotel\obj\Debug\MainWindow.baml
+C:\Users\User\source\repos\hotel\hotel\obj\Debug\hotel.g.resources
+C:\Users\User\source\repos\hotel\hotel\obj\Debug\hotel.Properties.Resources.resources
+C:\Users\User\source\repos\hotel\hotel\obj\Debug\hotel.csproj.GenerateResource.cache
+C:\Users\User\source\repos\hotel\hotel\obj\Debug\hotel.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\hotel\hotel\obj\Debug\hotel.exe
+C:\Users\User\source\repos\hotel\hotel\obj\Debug\hotel.pdb
