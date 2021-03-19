@@ -18,10 +18,10 @@
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
         <TextBlock Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30">Меню</TextBlock>
-        <TextBlock x:Name="new_guest" Grid.Row="1" FontSize="20" Margin="10" TextAlignment="Center" MouseLeftButtonDown="new_guest_MouseLeftButtonDown">Зарегестрировать гостя</TextBlock>
-        <TextBlock x:Name="minus_guest" Grid.Row="2" FontSize="20" Margin="10" TextAlignment="Center" MouseLeftButtonDown="minus_guest_MouseLeftButtonDown">Выселение</TextBlock>
-        <TextBlock x:Name="maybe_guest" Grid.Row="3" FontSize="20" Margin="10" TextAlignment="Center" MouseLeftButtonDown="maybe_guest_MouseLeftButtonDown">Бронирование</TextBlock>
-        <TextBlock x:Name="all_guest" Grid.Row="4" FontSize="20" Margin="10" TextAlignment="Center" MouseLeftButtonDown="all_guest_MouseLeftButtonDown">Список гостей</TextBlock>
+        <TextBlock x:Name="new_guest" Grid.Row="1" FontSize="20" Margin="10" TextAlignment="Center" MouseLeftButtonDown="new_guest_MouseLeftButtonDown" MouseEnter="MouseEnter" Background="White" MouseLeave="MouseLeave">Зарегестрировать гостя</TextBlock>
+        <TextBlock x:Name="minus_guest" Grid.Row="2" FontSize="20" Margin="10" TextAlignment="Center" MouseLeftButtonDown="minus_guest_MouseLeftButtonDown" MouseEnter="MouseEnter" MouseLeave="MouseLeave">Выселение</TextBlock>
+        <TextBlock x:Name="maybe_guest" Grid.Row="3" FontSize="20" Margin="10" TextAlignment="Center" MouseLeftButtonDown="maybe_guest_MouseLeftButtonDown" MouseEnter="MouseEnter" MouseLeave="MouseLeave">Бронирование</TextBlock>
+        <TextBlock x:Name="all_guest" Grid.Row="4" FontSize="20" Margin="10" TextAlignment="Center" MouseLeftButtonDown="all_guest_MouseLeftButtonDown" MouseEnter="MouseEnter" MouseLeave="MouseLeave">Список гостей</TextBlock>
         <TextBlock x:Name="time" Grid.Row="5" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16">Время/Дата</TextBlock>
     </Grid>
 
