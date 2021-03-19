@@ -43,5 +43,18 @@ namespace hotel
         {
             MessageBox.Show("Це кнопка all_guest");
         }
+
+        private void MouseEnter(object sender, MouseEventArgs e)
+        {
+            TextBlock btn = (TextBlock)sender;
+            btn.Background = Brushes.AntiqueWhite;
+
+        }
+
+        private void MouseLeave(object sender, MouseEventArgs e)
+        {
+            TextBlock btn = (TextBlock)sender;
+            btn.Background = Brushes.White;
+        }
     }
 }
