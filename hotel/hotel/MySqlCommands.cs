@@ -1,9 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using MySql.Data.MySqlClient;
 
 namespace MySqlCommands
 {
@@ -13,13 +9,13 @@ namespace MySqlCommands
         // MySqlCommands.DB comm = new MySqlCommands.DB();
         // comm.delete("gender", "`id` > '2'");
         MySqlConnection connection = new MySqlConnection("server=localhost;" + "port=3306;" + "username=root;" + "password= ;" + "database=hotel");
-        void OpenConnection()
+        private void OpenConnection()
         {
             if (connection.State == System.Data.ConnectionState.Closed)
                 connection.Open();
         }
 
-        void CloseConnection()
+        private void CloseConnection()
         {
             if (connection.State == System.Data.ConnectionState.Open)
                 connection.Close();
@@ -61,11 +57,14 @@ namespace MySqlCommands
             string querygeder = "SELECT " + column + " FROM " + table + " WHERE " + where;
             MySqlCommand command = new MySqlCommand(querygeder, connection);
             command.ExecuteNonQuery();
-            return command.ExecuteScalar().ToString();
+            string str = command.ExecuteScalar().ToString();
             CloseConnection();
+            return str;
+
         }
-        public string select(string table, string column)
+        public List<string> select(string table, string column)
         {
+            int iterattor = 0;
             //Пример использования: 
             OpenConnection();
             string querygeder = "SELECT " + column + " FROM " + table;
@@ -74,12 +73,13 @@ namespace MySqlCommands
             using MySqlDataReader rdr = command.ExecuteReader();
 
             string name = "";
+            List<string> masString = new List<string>();
             while (rdr.Read())
             {
-                name += rdr[0];
+                masString.Add(System.Convert.ToString(rdr[0])); //rdr[0] + " " + rdr[1] + " " + rdr[2] + " " + rdr[3] + " " + rdr[4] + " " + rdr[5] + " " + rdr[6] + " " + rdr[7] + " " + rdr[8] + " " + rdr[9] + " " + rdr[10] + " " + rdr[11] + " "
             }
             CloseConnection();
-            return name;
+            return masString;
         }
     }
 }

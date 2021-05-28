@@ -1,25 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using MainController;
+
 
 namespace hotel
 {
-    /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
+        Controller controler = new Controller();
         public MainWindow()
         {
             InitializeComponent();
@@ -28,7 +19,8 @@ namespace hotel
 
         private void new_guest_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            MessageBox.Show("Це кнопка new_guest");
+            Registration reg = new Registration();
+            reg.ShowDialog();
         }
         private void minus_guest_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
@@ -36,10 +28,13 @@ namespace hotel
         }
         private void maybe_guest_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            MessageBox.Show("Це кнопка maybe_guest");
+            Registration reg = new Registration();
+            reg.ShowDialog();
         }
         private void all_guest_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
+            UsersWindow newer = new UsersWindow(controler);
+            newer.Show();
             MessageBox.Show("Це кнопка all_guest");
         }
         private void MouseEnter(object sender, MouseEventArgs e)
