@@ -11,10 +11,19 @@ namespace MainController
         {
             database = new DB();
         }
+        public Controller(bool z)
+        {
+            //Заглушка? Кoстыль? Пофиг? да
+        }
 
         public bool AddPersons(string surname, string name, string sex, string birthday, int age, string Serial, string Serial_nums, string telephone, string room, string num, string input, string output)
         {
             //database.insert();
+            return true;
+        }
+        public bool DeletePerson(string id)
+        {
+            //database.delete();
             return true;
         }
 

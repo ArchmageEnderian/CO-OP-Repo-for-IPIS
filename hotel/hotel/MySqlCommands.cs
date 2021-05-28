@@ -5,16 +5,13 @@ namespace MySqlCommands
 {
     public class DB
     {
-        // Пример использования класса  
-        // MySqlCommands.DB comm = new MySqlCommands.DB();
-        // comm.delete("gender", "`id` > '2'");
         private MySqlConnection connection;
         private List<string> allString;
 
         public DB()
         {
             connection = new MySqlConnection("server=localhost;" + "port=3306;" + "username=root;" + "password= ;" + "database=hotel");
-            Grub();
+            List<string> zag = Grub();
         }
 
         public List<string> Grub()

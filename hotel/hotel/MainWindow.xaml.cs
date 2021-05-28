@@ -35,7 +35,7 @@ namespace hotel
         {
             UsersWindow newer = new UsersWindow(controler);
             newer.Show();
-            MessageBox.Show("Це кнопка all_guest");
+            //MessageBox.Show("Це кнопка all_guest");
         }
         private void MouseEnter(object sender, MouseEventArgs e)
         {
