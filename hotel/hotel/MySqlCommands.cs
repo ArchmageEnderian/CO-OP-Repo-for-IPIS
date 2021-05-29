@@ -5,10 +5,26 @@ namespace MySqlCommands
 {
     public class DB
     {
-        // Пример использования класса  
-        // MySqlCommands.DB comm = new MySqlCommands.DB();
-        // comm.delete("gender", "`id` > '2'");
-        MySqlConnection connection = new MySqlConnection("server=localhost;" + "port=3306;" + "username=root;" + "password= ;" + "database=hotel");
+        private MySqlConnection connection;
+        private List<string> allString;
+
+        public DB()
+        {
+            connection = new MySqlConnection("server=localhost;" + "port=3306;" + "username=root;" + "password= ;" + "database=hotel");
+            List<string> zag = Grub();
+        }
+
+        public List<string> Grub()
+        {
+            allString = select("client JOIN human ON human.id = client.human_id JOIN check_settling ON check_settling.id = client.check_id JOIN interval_arrive ON interval_arrive.id = check_settling.interval_id JOIN room ON room.id = check_settling.room_id JOIN gender ON gender.id = human.gender_id",
+                "human.surname, human.name, gender.title, human.birthdate,human.pasport_s, human.pasport_n,human.phone, interval_arrive.arrival_date, interval_arrive.departure_date, room.number, room.capacity");
+            return allString;
+        }
+
+        public List<string> GetUsers()
+        {
+            return allString;
+        }
         private void OpenConnection()
         {
             if (connection.State == System.Data.ConnectionState.Closed)

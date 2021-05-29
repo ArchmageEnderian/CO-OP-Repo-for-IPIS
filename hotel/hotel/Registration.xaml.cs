@@ -5,19 +5,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 using MainController;
 
 namespace hotel
 {
     public partial class Registration : Window
     {
-        Controller con = new Controller();
+        Controller con = new Controller(true);
         public Registration()
         {
             InitializeComponent();
