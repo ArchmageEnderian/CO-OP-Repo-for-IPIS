@@ -10,7 +10,7 @@ namespace hotel
 {
     public partial class MainWindow : Window
     {
-        Controller controler = new Controller();
+        //Controller controler = new Controller();
         public MainWindow()
         {
             InitializeComponent();
@@ -33,8 +33,8 @@ namespace hotel
         }
         private void all_guest_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            UsersWindow newer = new UsersWindow(controler);
-            newer.Show();
+           // UsersWindow newer = new UsersWindow(controler);
+            //newer.Show();
             //MessageBox.Show("Це кнопка all_guest");
         }
         private void MouseEnter(object sender, MouseEventArgs e)

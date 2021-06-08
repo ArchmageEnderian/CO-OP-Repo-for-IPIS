@@ -10,7 +10,7 @@ namespace MySqlCommands
 
         public DB()
         {
-            connection = new MySqlConnection("server=localhost;" + "port=3306;" + "username=root;" + "password= ;" + "database=hotel");
+            connection = new MySqlConnection("server=localhost;" + "port=3306;" + "username=root;" + "password= root;" + "database=hotel");
             List<string> zag = Grub();
         }
 
