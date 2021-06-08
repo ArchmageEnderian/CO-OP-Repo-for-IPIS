@@ -12,12 +12,11 @@ namespace MySqlCommands
         public DB()
         {
             connection = new MySqlConnection("server=localhost;" + "port=3306;" + "username=root;" + "password= root;" + "database=hotel");
-            List<string> zag = Grub();
+            allString = select();
         }
 
         public List<string> Grub()
         {
-            allString = select();
             return allString;
         }
 
@@ -39,6 +38,7 @@ namespace MySqlCommands
 
         public void insert(string table, string columns, string values)
         {
+            //Доделать
             OpenConnection();
             string querygeder = "INSERT INTO " + table + " (" + columns + ") VALUES (" + values + ")";
             MySqlCommand command = new MySqlCommand(querygeder, connection);

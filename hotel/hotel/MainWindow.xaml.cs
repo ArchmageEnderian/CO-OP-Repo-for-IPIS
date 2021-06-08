@@ -24,8 +24,7 @@ namespace hotel
         }
         private void minus_guest_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            DelWindow del = new DelWindow();
-            del.ShowDialog();
+            controler.deleteWindow();
         }
         private void maybe_guest_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {

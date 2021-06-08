@@ -115,6 +115,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Controller_View.cs" />
     <Compile Include="DelWindow.xaml.cs">
       <DependentUpon>DelWindow.xaml</DependentUpon>
     </Compile>
