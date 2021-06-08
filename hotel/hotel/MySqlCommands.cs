@@ -81,6 +81,7 @@ namespace MySqlCommands
         public List<string> select(string table, string column)
         {
             int iterattor = 0;
+
             //Пример использования: 
             OpenConnection();
             string querygeder = "SELECT " + column + " FROM " + table;
