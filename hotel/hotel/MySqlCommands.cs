@@ -1,6 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using System.Collections.Generic;
 
+
 namespace MySqlCommands
 {
     public class DB
@@ -16,8 +17,7 @@ namespace MySqlCommands
 
         public List<string> Grub()
         {
-            allString = select("client JOIN human ON human.id = client.human_id JOIN check_settling ON check_settling.id = client.check_id JOIN interval_arrive ON interval_arrive.id = check_settling.interval_id JOIN room ON room.id = check_settling.room_id JOIN gender ON gender.id = human.gender_id",
-                "human.surname, human.name, gender.title, human.birthdate,human.pasport_s, human.pasport_n,human.phone, interval_arrive.arrival_date, interval_arrive.departure_date, room.number, room.capacity");
+            allString = select();
             return allString;
         }
 
@@ -39,7 +39,6 @@ namespace MySqlCommands
 
         public void insert(string table, string columns, string values)
         {
-            //Пример использования: comm.insert("gender","`title`","'d'");
             OpenConnection();
             string querygeder = "INSERT INTO " + table + " (" + columns + ") VALUES (" + values + ")";
             MySqlCommand command = new MySqlCommand(querygeder, connection);
@@ -47,53 +46,28 @@ namespace MySqlCommands
             CloseConnection();
         }
 
-        public void update(string table, string set, string where)
-        {
-            //Пример использования: comm.update("gender", "title = 'IGOR'", "`id` = '4'");
-            OpenConnection();
-            string querygeder = "UPDATE " + table + " SET " + set + " WHERE " + where;
-            MySqlCommand command = new MySqlCommand(querygeder, connection);
-            command.ExecuteNonQuery();
-            CloseConnection();
-        }
-
-        public void delete(string table, string where)
+        public void delete(string id)
         {
             //Пример использования: comm.delete("gender", "`id` > '2'");
             OpenConnection();
-            string querygeder = "DELETE FROM " + table + " WHERE " + where;
+            string querygeder = "DELETE FROM human WHERE " + id;
             MySqlCommand command = new MySqlCommand(querygeder, connection);
             command.ExecuteNonQuery();
             CloseConnection();
         }
-        public string selectWhere(string table, string column, string where)
+        public List<string> select()
         {
-            //Пример использования: 
             OpenConnection();
-            string querygeder = "SELECT " + column + " FROM " + table + " WHERE " + where;
-            MySqlCommand command = new MySqlCommand(querygeder, connection);
-            command.ExecuteNonQuery();
-            string str = command.ExecuteScalar().ToString();
-            CloseConnection();
-            return str;
-
-        }
-        public List<string> select(string table, string column)
-        {
-            int iterattor = 0;
-
-            //Пример использования: 
-            OpenConnection();
-            string querygeder = "SELECT " + column + " FROM " + table;
+            string querygeder = "SELECT human.id, human.surname, human.name, gender.title, human.birthdate,human.pasport_s, human.pasport_n,human.phone, interval_arrive.arrival_date, interval_arrive.departure_date, room.number, room.capacity FROM client JOIN human ON human.id = client.human_id JOIN check_settling ON check_settling.id = client.check_id JOIN interval_arrive ON interval_arrive.id = check_settling.interval_id JOIN room ON room.id = check_settling.room_id JOIN gender ON gender.id = human.gender_id";
             MySqlCommand command = new MySqlCommand(querygeder, connection);
 
             using MySqlDataReader rdr = command.ExecuteReader();
 
-            string name = "";
             List<string> masString = new List<string>();
             while (rdr.Read())
             {
-                masString.Add(System.Convert.ToString(rdr[0])); //rdr[0] + " " + rdr[1] + " " + rdr[2] + " " + rdr[3] + " " + rdr[4] + " " + rdr[5] + " " + rdr[6] + " " + rdr[7] + " " + rdr[8] + " " + rdr[9] + " " + rdr[10] + " " + rdr[11] + " "
+                masString.Add( System.Convert.ToString(rdr[0]) + " " + System.Convert.ToString(rdr[1]) + " " + System.Convert.ToString(rdr[2]) + " " + System.Convert.ToString(rdr[3]) + " " + System.Convert.ToString(rdr[4]) + " " + System.Convert.ToString(rdr[5]) + " " + System.Convert.ToString(rdr[6]) + " " + System.Convert.ToString(rdr[7]) + " " + System.Convert.ToString(rdr[8]) + " " + System.Convert.ToString(rdr[9]) + " " + System.Convert.ToString(rdr[10]) + " " + System.Convert.ToString(rdr[11]) + "\n"); 
+                //rdr[0] + " " + rdr[1] + " " + rdr[2] + " " + rdr[3] + " " + rdr[4] + " " + rdr[5] + " " + rdr[6] + " " + rdr[7] + " " + rdr[8] + " " + rdr[9] + " " + rdr[10] + " " + rdr[11] + " "
             }
             CloseConnection();
             return masString;

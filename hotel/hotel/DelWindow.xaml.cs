@@ -92,9 +92,6 @@ namespace hotel
             DataTable table = hernya.GenTable(names);
             //Это говно заменить на массив строк, что придет в результате запроса   ^
             CustomerGrid.DataContext = table;
-
-            string nopr = CustomerGrid[0, CustomerGrid.CurrentRow.Index].Value.ToString();
-            MessageBox.Show(nopr);
         }
     }
 }

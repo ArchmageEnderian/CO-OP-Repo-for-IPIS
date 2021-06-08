@@ -23,7 +23,7 @@ namespace MainController
         }
         public bool DeletePerson(string id)
         {
-            //database.delete();
+            database.delete(id);
             return true;
         }
 
