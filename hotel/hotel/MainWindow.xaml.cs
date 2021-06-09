@@ -19,23 +19,19 @@ namespace hotel
 
         private void new_guest_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            Registration reg = new Registration();
-            reg.ShowDialog();
+            controler.regShow();
         }
         private void minus_guest_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            MessageBox.Show("Це кнопка minus_guest");
+            controler.deleteWindow();
         }
         private void maybe_guest_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            Registration reg = new Registration();
-            reg.ShowDialog();
+           controler. regShow();
         }
         private void all_guest_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            UsersWindow newer = new UsersWindow(controler);
-            newer.Show();
-            //MessageBox.Show("Це кнопка all_guest");
+            controler.all_guest();
         }
         private void MouseEnter(object sender, MouseEventArgs e)
         {

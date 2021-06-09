@@ -63,3 +63,5 @@ D:\GitKraken\CO-OP-Repo-for-IPIS\hotel\hotel\obj\Debug\UsersWindow.g.cs
 D:\GitKraken\CO-OP-Repo-for-IPIS\hotel\hotel\obj\Debug\UsersWindow.baml
 D:\GitKraken\CO-OP-Repo-for-IPIS\hotel\hotel\obj\Debug\Registration.g.cs
 D:\GitKraken\CO-OP-Repo-for-IPIS\hotel\hotel\obj\Debug\Registration.baml
+D:\GitKraken\CO-OP-Repo-for-IPIS\hotel\hotel\obj\Debug\DelWindow.g.cs
+D:\GitKraken\CO-OP-Repo-for-IPIS\hotel\hotel\obj\Debug\DelWindow.baml
