@@ -30,6 +30,8 @@ namespace hotel
         private void NoButton_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             int id = Convert.ToInt32(InputTextBox.Text);
+            contr.useId(id);
+            this.Close();
         }
     }
 }

@@ -20,6 +20,10 @@ namespace DeleteController
             wind.start(database.Grub());
             wind.Show();
         }
+        public void useId(int id)
+        {
+            database.delete(id);
+        }
         public DelController(DelWindow window, DB data)
         {
             database = data;
@@ -50,10 +54,10 @@ namespace DeleteController
             table.PrimaryKey = PrimaryKeyColumns;
         }
 
-        public DataTable GenTable(List<String> st)
+        public DataTable GenTable(List<string> st)
         {
 
-            st.ForEach(delegate (String s)
+            st.ForEach(delegate (string s)
             {
 
                 string[] subs = s.Split(' ');

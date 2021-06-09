@@ -7,13 +7,7 @@
         mc:Ignorable="d"
         Title="Список снимающих" Height="450" Width="800">
     <Grid>
-        <RichTextBox x:Name="TextBox" HorizontalAlignment="Left" Height="364" Margin="10,45,0,0" VerticalAlignment="Top" Width="772">
-            <FlowDocument>
-                <Paragraph>
-                    <Run Text=""/>
-                </Paragraph>
-            </FlowDocument>
-        </RichTextBox>
+        <DataGrid x:Name="CustomerGrid" ItemsSource="{Binding}" AlternatingRowBackground="LightBlue" AlternationCount="2" Height="390" VerticalAlignment="Top" />
         <Label Content="Список проживающих" HorizontalAlignment="Left" Height="30" Margin="10,10,0,0" VerticalAlignment="Top" Width="772"/>
 
     </Grid>

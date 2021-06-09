@@ -1,17 +1,17 @@
 ﻿using MainController;
 using System.Windows;
 using System.Collections.Generic;
+using System.Data;
 
 namespace hotel
 {
     public partial class UsersWindow : Window
     {
-        public UsersWindow(Controller controler)
+        public UsersWindow(Controller controler, List<string> names)
         {
             InitializeComponent();
-            List<string> qwe = controler.ShowUsers();
-            foreach (string str in qwe)
-            TextBox.AppendText(System.Convert.ToString(str));
+            DataTable table = controler.GenTable(names);
+            CustomerGrid.DataContext = table;
         }
     }
 }

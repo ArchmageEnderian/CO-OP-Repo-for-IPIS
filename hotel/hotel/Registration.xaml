@@ -18,8 +18,8 @@
         <TextBox x:Name="room" HorizontalAlignment="Left" Height="30" Margin="9,240,0,0" TextWrapping="Wrap" Text="Номер комнаты" VerticalAlignment="Top" Width="320"/>
         <RadioButton Content="С детьми?" HorizontalAlignment="Left" Height="30" Margin="9,275,0,0" VerticalAlignment="Top" Width="155"/>
         <TextBox x:Name="num" HorizontalAlignment="Left" Height="30" Margin="175,275,0,0" TextWrapping="Wrap" Text="Количество людей" VerticalAlignment="Top" Width="154"/>
-        <TextBox x:Name="input" HorizontalAlignment="Left" Height="30" Margin="10,310,0,0" TextWrapping="Wrap" Text="Дата заселения" VerticalAlignment="Top" Width="155" PreviewTextInput="input_PreviewTextInput"/>
-        <TextBox x:Name="output" HorizontalAlignment="Left" Height="30" Margin="175,310,0,0" TextWrapping="Wrap" Text="Дата выселения" VerticalAlignment="Top" Width="154" PreviewTextInput="output_PreviewTextInput"/>
+        <TextBox x:Name="input" HorizontalAlignment="Left" Height="30" Margin="10,310,0,0" TextWrapping="Wrap" Text="Дата заселения" VerticalAlignment="Top" Width="155"/>
+        <TextBox x:Name="output" HorizontalAlignment="Left" Height="30" Margin="175,310,0,0" TextWrapping="Wrap" Text="Дата выселения" VerticalAlignment="Top" Width="154"/>
         <Button Content="Записать" HorizontalAlignment="Left" Height="40" Margin="10,345,0,0" VerticalAlignment="Top" Width="319" Click="Button_Click"/>
 
     </Grid>

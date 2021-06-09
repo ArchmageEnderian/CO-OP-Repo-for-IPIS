@@ -36,21 +36,35 @@ namespace MySqlCommands
                 connection.Close();
         }
 
-        public void insert(string table, string columns, string values)
+        public void insert(string surname, string name, string sex, string birthday, int age, string Serial, string Serial_nums, string telephone, string room, string num, string input, string output)
         {
-            //Доделать
             OpenConnection();
-            string querygeder = "INSERT INTO " + table + " (" + columns + ") VALUES (" + values + ")";
-            MySqlCommand command = new MySqlCommand(querygeder, connection);
+            string first = "INSERT INTO interval_arrive (arrival_date, departure_date) VALUES (" + input + ", " + output + ")";
+            
+            string second = "INSERT INTO check_settling (interval_id,room_id) VALUES (" + room + ", 10)";
+            string third = "INSERT INTO human (surname, name, gender_id, birthdate, pasport_s, pasport_n, phone) VALUES (" + surname + ", " + name + ", " + sex + ", " + birthday + ", " + Serial + ", " + Serial_nums + ", " + telephone + ")";
+            string fourth = "INSERT INTO client (human_id, check_id) VALUES (11 , 12)";
+            string fifth = "INSERT INTO room (number, capacity) VALUES (" + room + ", " + num + ")";
+            
+            MySqlCommand command = new MySqlCommand(first, connection);
             command.ExecuteNonQuery();
+            
+            _ = new MySqlCommand(second, connection);
+            command.ExecuteNonQuery();
+            _ = new MySqlCommand(third, connection);
+            command.ExecuteNonQuery();
+            _ = new MySqlCommand(fourth, connection);
+            command.ExecuteNonQuery();
+            _ = new MySqlCommand(fifth, connection);
+            command.ExecuteNonQuery();
+            
             CloseConnection();
         }
 
-        public void delete(string id)
+        public void delete(int id)
         {
-            //Пример использования: comm.delete("gender", "`id` > '2'");
             OpenConnection();
-            string querygeder = "DELETE FROM human WHERE " + id;
+            string querygeder = "DELETE FROM human WHERE id = " + System.Convert.ToString(id);
             MySqlCommand command = new MySqlCommand(querygeder, connection);
             command.ExecuteNonQuery();
             CloseConnection();
